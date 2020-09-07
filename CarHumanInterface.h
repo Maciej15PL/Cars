@@ -7,25 +7,25 @@ typedef float Distance;
 
 class CarHumanInterface {
 private:
-    Car* car;   //auto które chcemy obsługiwać
+    Car* car;
 public:
     explicit CarHumanInterface(Car* car);
 
-    void commandLineInterface();    // obsługa za pomocą konsoli
+    void commandLineInterface();
 
-    void status(); // status auta, ile jest paliwa, czy silnik działa, ile jest w bagażniku
+    void status();
 
-    void startEngine(); // uruchamia silnik
-    void stopEngine(); // zatrzymuje silnik
+    void startEngine();
+    void stopEngine();
 
-    void toggleLights(); // przełącza światła
+    void toggleLights();
 
-    void refuel(Liter amount); // tankuje x litrów do zbiornika
+    void refuel(Liter amount);
 
-    void drive(Distance distance); // jedzie przez określony dystans
+    void drive(Distance distance);
 
-    void addPayload(Weight payload); // dodaje masę do bagażnika
-    void removePayload(Weight payload); // usuwa --||--
+    void addPayload(Weight payload);
+    void removePayload(Weight payload);
 };
 
 

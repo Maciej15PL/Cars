@@ -14,7 +14,7 @@ void CarHumanInterface::commandLineInterface() {
         std::cout << "Co chcesz zrobic? [wyjscie, status, start, stop, swiatla, tankuj, jedz, zaladuj, rozladuj]: ";
         std::cin >> action;
 
-        try {   //jeżeli jakaś funkcja się nie powiedzie wyrzuci bład który zostanie złapany
+        try {
             if (action == "wyjscie") {
                 running = false;
             } else if (action == "status") {
@@ -52,7 +52,7 @@ void CarHumanInterface::commandLineInterface() {
             }
 
             std::cout << "Gotowe!" << std::endl;
-        } catch (std::runtime_error& error) {   // i wyświetlone zostanie co dokładnie poszło nie tak
+        } catch (std::runtime_error& error) {
             std::cout << "Blad: " << error.what() << std::endl;
         }
     }
